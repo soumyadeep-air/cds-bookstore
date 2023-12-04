@@ -1,0 +1,18 @@
+{
+  "cds": {
+    "requires": {
+      "db": {
+        "[development]": {
+          "kind": "postgres",
+          "impl": "@cap-js/postgres",
+          "credentials": { "url": "jdbc:postgresql://localhost:5432/bookstore" }
+        },
+        "[production]": {
+          "kind": "hana",
+          "impl": "@sap/cds-hana",
+          "deploy-format": "hdbtable"
+        }
+      }
+    }
+  }
+}
